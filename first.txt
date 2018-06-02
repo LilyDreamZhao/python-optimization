@@ -1,0 +1,24 @@
+#列表元素最后翻转速度快于一开始插入一个个插入到前面
+import datetime
+
+count = 10**5
+nums = []
+
+starttime = datetime.datetime.now()
+#long running
+for i in range(count):
+    nums.append(i)
+nums.reverse()
+endtime = datetime.datetime.now()
+print( (endtime - starttime).microseconds)
+#结果：10026
+
+count = 10**5
+nums = []
+starttime = datetime.datetime.now()
+#long running
+for i in range(count):
+    nums.insert(0,i)
+endtime = datetime.datetime.now()
+print( (endtime - starttime).microseconds)
+#结果：559471
