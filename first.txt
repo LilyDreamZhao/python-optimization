@@ -22,3 +22,8 @@ for i in range(count):
 endtime = datetime.datetime.now()
 print( (endtime - starttime).microseconds)
 #结果：559471
+
+
+#sort,shuffle数组 arr[index]是返回新的对象，所以在自动垃圾回收机制下未来得及清理，会出现内存不够情况
+
+
