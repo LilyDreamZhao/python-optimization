@@ -24,6 +24,17 @@ print( (endtime - starttime).microseconds)
 #结果：559471
 
 
-#sort,shuffle数组 arr[index]是返回新的对象，所以在自动垃圾回收机制下未来得及清理，会出现内存不够情况
+#list.sort(),shuffle数组 arr[index]是返回新的对象，所以在自动垃圾回收机制下未来得及清理，会出现内存不够情况
 
+#mutators or updata methods:
+	list.sor() arr[index] string.lower返回新的对象
+
+#set 比 list判断是否存在某个元素更加高效
+
+#连续赋值产生更少的临时变量
+def fibonacci():
+    a,b=0,1
+    while True:
+        yield a
+	a,b=b,a+b
 
