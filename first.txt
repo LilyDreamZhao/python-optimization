@@ -38,3 +38,15 @@ def fibonacci():
         yield a
 	a,b=b,a+b
 
+
+#int 是动态长度
+#列表每4个元素占32字节（不足4个也是32字节）(未考虑一个元素本身字节数超过8字节），空列表占64字节
+import sys
+data=[]
+for k in range（20):
+    a=len(data)
+    b=sys.getsizeof(data)
+    print("data:",data)
+    print("length:",a,"size:",b)
+    data.append(None)
+
